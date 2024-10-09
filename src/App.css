@@ -1,5 +1,6 @@
 .bg-new{
-  background: #EED7FB; background-image: radial-gradient(at 7.2% 19.8%, hsl(356, 100%, 80%) 0px, transparent 50%),radial-gradient(at 46.9% 53.1%, hsl(278, 100%, 80%) 0px, transparent 50%),radial-gradient(at 69.1% 27.5%, hsl(144, 100%, 80%) 0px, transparent 50%),radial-gradient(at 19.0% 80.3%, hsl(200, 100%, 80%) 0px, transparent 50%),radial-gradient(at 78.8% 79.0%, hsl(54, 100%, 80%) 0px, transparent 50%)
+  background: #DA99FF; 
+  background-image: radial-gradient(at 85.1% 88.1%, hsl(144, 100%, 80%) 0px, transparent 50%),radial-gradient(at 11.5% 25.8%, hsl(356, 100%, 80%) 0px, transparent 50%)
 }
 
 .bloby{
