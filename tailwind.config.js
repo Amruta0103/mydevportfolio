@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx,tsx,webp,png,jpg,jpeg,svg}"],
+  content: ["./src/**/*.{html,js,jsx,tsx,,png,jpg,jpeg,mp4,svg}"],
   theme: {
     screens:{
       'xs': '425px',
@@ -26,6 +26,7 @@ module.exports = {
     extend:{
       backgroundImage:{
         "base-gradient": 'linear-gradient(90deg, rgba(153, 255, 193, 0.7) 0%, rgba(255, 245, 153, 0.7) 50%, rgba(255, 153, 160, 0.7) 100%)',
+        'screens': "url('/src/assets/screens.mp4')",
       },
       borderColor:{
         "border-gradient": 'backgroundImage:linear-gradient(90deg, rgba(153, 255, 193, 0.7) 0%, rgba(255, 245, 153, 0.7) 50%, rgba(255, 153, 160, 0.7) 100%)',
@@ -34,7 +35,7 @@ module.exports = {
       },
       colors:{
         "grads": "linear-gradient(90deg, rgba(153, 255, 193, 0.7) 0%, rgba(255, 245, 153, 0.7) 50%, rgba(255, 153, 160, 0.7) 100%)",
-      }
+      },
     }
   },
   plugins: [],
