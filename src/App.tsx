@@ -1,24 +1,15 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-// import helloWhite from './assets/hello-white.svg';
-// import typing from './assets/typing.svg';
-// import connect from './assets/connect.svg';
-// import win from './assets/win.svg';
+import flyingComp from "./assets/flyingComputer.mp4";
 import elementalscreen from './assets/elementalscreen.jpg';
 import grainscreen from './assets/grainscreen.jpg';
 import mountain from './assets/mountain.mp4';
 import arrowUp from './assets/chevron-up.svg';
 import WorkCards from "./components/workCards";
-// import Works from "./tabs/works";
-// import Contact from "./tabs/contact";
-// import About from "./tabs/about";
-
-// function scrollToElement(id:any) {
-//   const element = document.getElementById(id);
-//   if (element) {
-//     element.scrollIntoView({ behavior: 'smooth' });
-//   }
-// }
+import Linkedin from "./assets/Linkedin.svg";
+import Github from "./assets/Github.svg";
+import Twitter from "./assets/Twitter.svg";
+import { url } from "inspector";
 
 function App() {
   const [openNav, setOpenNav] = useState(false);
@@ -90,23 +81,30 @@ function App() {
           <h1 className="font-fontlaila">Hello 👋</h1>
           <p className="font-fontJetMono text-center w-[70%] leading-6">I’m someone who loves problem-solving through code and has a newfound passion for design. My focus is on building UIs that not only look good but also deliver smooth, intuitive user experiences.<br/>
           With a keen eye for detail and a growing love for creating intuitive user interfaces, my mission is to design and develop websites and applications that not only work seamlessly but also feel amazing to use. This space is my journey, where I’ll document my growth and share my projects.<br/>
-          Whether it’s code, design, or a mix of both, I’m excited to connect, learn, and create cool stuff with you. Let’s connect, share ideas, and build something incredible together! 🌟</p>
+          Whether it’s code, design, or a mix of both, I’m excited to connect, learn, and create cool stuff with you.</p>
         </div>
       </div>
       <div id='works' className="projectsBlock h-screen min-h-max w-full py-8 md:py-[60px] px-4 md:px-0 relative flex justify-center items-center">
         <video autoPlay muted loop>
           <source src={mountain} type="video/mp4"/>
         </video>
-        <div className="mainBox w-[80%] max-w-[1224px] h-full max-h-[1224px] flex gap-3 items-center justify-center p-2">
-          {/* <div className="topContainer w-full h-full flex gap-3 items-center justify-center rounded-[32px]"> */}
-            <WorkCards/>
-          {/* </div> */}
+        <div className="mainBox w-full max-w-[1224px] h-full flex gap-3 items-center justify-center">
+          <div className="cardsConstainer bg-[#ffffffcc] width-fit py-4 px-8 rounded-2xl">
+            <WorkCards/>         
+          </div>
         </div>
       </div>
       <div id='connect' className="connectBlock h-screen min-h-max w-full py-8 md:py-[60px] px-4 md:px-0 relative flex justify-center">
-        <div className="flex flex-col justify-center items-center gap-0 sm:gap-3 px-4 xl:px-0 py-4 w-full max-w-[1224px] h-full">
-          <h1 className="font-fontlaila">Let's Connect</h1>
-          <h4 className="font-fontRale">mail</h4>
+        <div className="flex flex-col justify-center items-center gap-5 sm:gap-6 px-4 xl:px-0 py-4 w-full max-w-[1224px] h-full">
+          <div className="flex flex-col gap-3 justify-center items-center">
+            <h1 className="font-fontlaila">Let's Connect</h1>
+            <p className="font-fontRale">Let’s connect, share ideas, and build something incredible together! 🌟</p>
+          </div>
+          <div className="flex gap-4 justify-center items-center w-fit p-2">
+            <img src={Linkedin} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
+            <img src={Github} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
+            <img src={Twitter} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
+          </div>
         </div>
       </div>
       <div id='wins' className="docsBlock h-screen min-h-max w-full py-8 md:py-[60px] px-4 md:px-0 relative flex justify-center items-center">
