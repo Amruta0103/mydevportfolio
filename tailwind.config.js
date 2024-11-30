@@ -24,6 +24,9 @@ module.exports = {
       fontLumino: ["Lumanosimo", 'cursive'],
       fontMerri: ["Merriweather", 'serif'],
     },
+    backgroundSize:{
+      '50%': '50%',
+    },
     extend:{
       backgroundImage:{
         "base-gradient": 'linear-gradient(90deg, rgba(153, 255, 193, 0.7) 0%, rgba(255, 245, 153, 0.7) 50%, rgba(255, 153, 160, 0.7) 100%)',
@@ -35,7 +38,7 @@ module.exports = {
         "main-grad": 'var(--main-gradient)',
       },
       colors:{
-        "grads": "linear-gradient(90deg, rgba(153, 255, 193, 0.7) 0%, rgba(255, 245, 153, 0.7) 50%, rgba(255, 153, 160, 0.7) 100%)",
+        "greyBlack" : "#000000b2"
       },
     }
   },
