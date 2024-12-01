@@ -40,6 +40,9 @@ module.exports = {
       colors:{
         "greyBlack" : "#000000b2"
       },
+      listStyleImage: {
+        hyphen: "url('/src/assets/hyphenSmall.svg')",
+      },
     }
   },
   plugins: [],
