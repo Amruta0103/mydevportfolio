@@ -5,11 +5,21 @@ import me from './assets/me.webp'
 import Linkedin from "./assets/Linkedin.svg";
 import Github from "./assets/Github.svg";
 import Twitter from "./assets/Twitter.svg";
+import File from "./assets/File.svg";
 import courseCert from './assets/CourseraGoogleUXDesign.jpg';
 import WorkCards from "./components/workCards";
-
+import Resume from './assets/files/AMRUTADHARAP_2024.pdf';
 function App() {
   const [tab, setTab] = useState('Home');
+  // const downloadResume = () => {
+  //   const pdfUrl = './assets/galaxy.webp';
+  //   const link = document.createElement("a");
+  //   link.href = pdfUrl;
+  //   link.download = "galaxyImage.webp"; // specify the filename
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // }
   return (
     <div className="App z-0 relative flex flex-col justify-between items-center w-full h-full max-h-screen text-greyBlack scroll-smooth">
       <div className="flex flex-col sm:flex-row gap-6 justify-evenly items-center h-screen w-full">
@@ -68,6 +78,9 @@ function App() {
                   </a>
                   <a href={'https://x.com/AmrutaDharap'} className="cursor-pointer">
                     <img src={Twitter} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
+                  </a>
+                  <a href={Resume} download={'Resume'} type="file/pdf" className="cursor-pointer">
+                    <img src={File} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
                   </a>
                 </div>
               </div>
