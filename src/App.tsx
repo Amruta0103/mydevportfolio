@@ -20,6 +20,27 @@ function App() {
   //   link.click();
   //   document.body.removeChild(link);
   // }
+
+  const downloadFile = (fileContent:any, fileName:any) => {
+    // Create a Blob from the file content
+    const blob = new Blob([fileContent], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+
+    // Create an anchor element to trigger the download
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = fileName; // Set the desired file name
+    document.body.appendChild(link);
+
+    // Trigger the download
+    link.click();
+
+    // Clean up
+    link.remove();
+    URL.revokeObjectURL(url);
+  };
+
+
   return (
     <div className="App z-0 relative flex flex-col justify-between items-center w-full h-full max-h-screen text-greyBlack scroll-smooth">
       <div className="flex flex-col sm:flex-row gap-6 justify-evenly items-center h-screen w-full">
@@ -79,9 +100,9 @@ function App() {
                   <a href={'https://x.com/AmrutaDharap'} className="cursor-pointer">
                     <img src={Twitter} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
                   </a>
-                  <a href={Resume} title="AmrutaDharap" download="AmrutaDharap" type="file/pdf" className="cursor-pointer">
-                    <img src={File} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
-                  </a>
+                  {/* <a href={Resume} title="AmrutaDharap" download="AmrutaDharap" type="file/pdf" className="cursor-pointer"> */}
+                    <img onClick={()=>downloadFile('AmrutaDharap',Resume)} src={File} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
+                  {/* </a> */}
                 </div>
               </div>
             </div>
