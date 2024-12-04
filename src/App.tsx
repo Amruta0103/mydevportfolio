@@ -7,38 +7,39 @@ import Github from "./assets/Github.svg";
 import Twitter from "./assets/Twitter.svg";
 import File from "./assets/File.svg";
 import courseCert from './assets/CourseraGoogleUXDesign.jpg';
-import WorkCards from "./components/workCards";
-import Resume from './assets/files/AMRUTADHARAP_2024.pdf';
+// import WorkCards from "./components/workCards";
+import Resume from "./assets/files/AMRUTADHARAP_2024.pdf";
+
 function App() {
   const [tab, setTab] = useState('Home');
   // const downloadResume = () => {
-  //   const pdfUrl = './assets/galaxy.webp';
+  //   const pdfUrl = "./assets/files/AMRUTADHARAP_2024.pdf";
   //   const link = document.createElement("a");
   //   link.href = pdfUrl;
-  //   link.download = "galaxyImage.webp"; // specify the filename
+  //   link.download = "AMRUTADHARAP_2024"; // specify the filename
   //   document.body.appendChild(link);
   //   link.click();
   //   document.body.removeChild(link);
   // }
 
-  const downloadFile = (fileContent:any, fileName:any) => {
-    // Create a Blob from the file content
-    const blob = new Blob([fileContent], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
+  // const downloadFile = (fileContent:any, fileName:any) => {
+  //   // Create a Blob from the file content
+  //   const blob = new Blob([fileContent], { type: 'text/plain' });
+  //   const url = URL.createObjectURL(blob);
 
-    // Create an anchor element to trigger the download
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = fileName; // Set the desired file name
-    document.body.appendChild(link);
+  //   // Create an anchor element to trigger the download
+  //   const link = document.createElement('a');
+  //   link.href = url;
+  //   link.download = fileName; // Set the desired file name
+  //   document.body.appendChild(link);
 
-    // Trigger the download
-    link.click();
+  //   // Trigger the download
+  //   link.click();
 
-    // Clean up
-    link.remove();
-    URL.revokeObjectURL(url);
-  };
+  //   // Clean up
+  //   link.remove();
+  //   URL.revokeObjectURL(url);
+  // };
 
 
   return (
@@ -74,13 +75,19 @@ function App() {
             </div>
           }
           { tab === 'Works' &&
-            <div className="WorksTab flex flex-col gap-10 py-10 justify-around items-center w-full h-full overflow-y-auto" style={{scrollbarWidth: 'none'}}>
+            <div className="WorksTab flex flex-col gap-6 py-10 justify-center items-center w-full h-full overflow-y-auto" style={{scrollbarWidth: 'none'}}>
               <h2 className="font-fontJose font-[550] py-2">Projects & Case Studies</h2>
-              <div className="flex flex-col gap-8 w-full">
+                <p className="w-full h-fit text-center font-[550] font-fontRale">
+                  Work is in Progress!! <br/>
+                  Updates will be posted soon! <br/>
+                </p>
+                <p className="w-full h-fit text-center font-medium font-fontRale">Meanwhile you can checkout <a href={'https://github.com/Amruta0103'} className="cursor-pointer underline"> my Github here</a> : &#41;
+                </p>
+              {/* <div className="flex flex-col gap-8 w-full justify-center items-center">
                 <WorkCards/>
                 <WorkCards/>
                 <WorkCards/>
-              </div>
+              </div> */}
             </div>
           }
           { tab === 'Connect' &&
@@ -100,9 +107,9 @@ function App() {
                   <a href={'https://x.com/AmrutaDharap'} className="cursor-pointer">
                     <img src={Twitter} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
                   </a>
-                  {/* <a href={Resume} title="AmrutaDharap" download="AmrutaDharap" type="file/pdf" className="cursor-pointer"> */}
-                    <img onClick={()=>downloadFile('AmrutaDharap',Resume)} src={File} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
-                  {/* </a> */}
+                  <a href={Resume} title="AmrutaDharap" type="file/pdf" download="AmrutaDharap" className="cursor-pointer">
+                    <img src={File} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12 cursor-pointer" alt='img'/>
+                  </a>
                 </div>
               </div>
             </div>
