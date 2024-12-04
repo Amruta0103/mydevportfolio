@@ -79,7 +79,7 @@ function App() {
                   <a href={'https://x.com/AmrutaDharap'} className="cursor-pointer">
                     <img src={Twitter} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
                   </a>
-                  <a href={Resume} title="AmrutaDharap" download={'Resume'} type="file/pdf" className="cursor-pointer">
+                  <a href={Resume} title="AmrutaDharap" download="AmrutaDharap" type="file/pdf" className="cursor-pointer">
                     <img src={File} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
                   </a>
                 </div>
