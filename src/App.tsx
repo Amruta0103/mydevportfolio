@@ -107,7 +107,7 @@ function App() {
                   <a href={'https://x.com/AmrutaDharap'} className="cursor-pointer">
                     <img src={Twitter} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
                   </a>
-                  <a href={"https://drive.google.com/file/d/1vBV8FMiVMZlOUtTfmgxUE2tETmPtoEN9/view?usp=drive_link"} title="AmrutaDharap" type="file/pdf" download="AmrutaDharap" className="cursor-pointer">
+                  <a href={"https://drive.google.com/file/d/1ZlvyTjp-2LCk5l5FxuFd8973BfriD0wS/view?usp=sharing"} className="cursor-pointer">
                     <img src={File} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12 cursor-pointer" alt='img'/>
                   </a>
                 </div>
