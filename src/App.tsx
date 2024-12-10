@@ -84,6 +84,7 @@ function App() {
                 <p className="w-full h-fit text-center font-medium font-fontRale">Meanwhile you can checkout <a href={'https://github.com/Amruta0103'} className="cursor-pointer underline"> my Github here</a> : &#41;
                 </p> */}
                 <WorkCards/>
+                <p className="w-full h-fit text-center font-medium font-fontRale py-2 sm:py-4">My new projects with more <span className="font-semibold italic">design-focused</span> approach will be posted soon! Stay Tuned!!</p>
             </div>
           }
           { tab === 'Connect' &&
