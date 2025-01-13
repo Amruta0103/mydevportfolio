@@ -114,9 +114,9 @@ function App() {
         </div>
         <ul className="flex flex-row sm:flex-col p-4 gap-2 sm:gap-4 justify-center items-center font-fontJetMono w-full sm:w-1/5 bg-white bottom-0">
           <button onClick={()=> setTab('Home')} className={`${tab === 'Home' ? 'border-b-2 border-greyBlack': 'border-b border-transparent'} cursor-pointer w-fit list-none p-1 sm:p-2`}><h4>Home</h4></button>
-          <button onClick={()=> setTab('About')} className={`${tab === 'About' ? 'border-b-2 border-greyBlack': 'border-b border-transparent'} cursor-pointer w-fit list-none p-1 sm:p-2`}><h4>About</h4></button>
-          <button onClick={()=> setTab('Works')} className={`${tab === 'Works' ? 'border-b-2 border-greyBlack': 'border-b border-transparent'} cursor-pointer w-fit list-none p-1 sm:p-2`}><h4>Works</h4></button>
-          <button onClick={()=> setTab('Connect')} className={`${tab === 'Connect' ? 'border-b-2 border-greyBlack': 'border-b border-transparent'} cursor-pointer w-fit list-none p-1 sm:p-2`}><h4>Connect</h4></button>
+          <button onClick={()=> setTab('About')} className={`${tab === 'About' ? 'border-b-2 border-greyBlack': 'border-b border-transparent'} cursor-pointer w-fit list-none p-1 sm:p-2`}><h4>About Me</h4></button>
+          <button onClick={()=> setTab('Works')} className={`${tab === 'Works' ? 'border-b-2 border-greyBlack': 'border-b border-transparent'} cursor-pointer w-fit list-none p-1 sm:p-2`}><h4>Projects</h4></button>
+          <button onClick={()=> setTab('Connect')} className={`${tab === 'Connect' ? 'border-b-2 border-greyBlack': 'border-b border-transparent'} cursor-pointer w-fit list-none p-1 sm:p-2`}><h4>Let's Connect</h4></button>
         </ul>
       </div>
     </div>
