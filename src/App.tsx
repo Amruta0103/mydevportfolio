@@ -6,6 +6,10 @@ import Linkedin from "./assets/Linkedin.svg";
 import Github from "./assets/Github.svg";
 import Twitter from "./assets/Twitter.svg";
 import File from "./assets/File.svg";
+import idIcon from "./assets/idIcon.svg";
+import flagIcon from "./assets/flagIcon.svg";
+import linkIcon from "./assets/linkIcon.svg";
+import folderIcon from "./assets/folderIcon.svg"
 import courseCert from './assets/CourseraGoogleUXDesign.jpg';
 import WorkCards from "./components/workCards";
 // import Resume from "./assets/files/AmrutaDharap_2024.pdf";
@@ -96,16 +100,16 @@ function App() {
                 </div>
                 <div className="flex gap-4 justify-center items-center w-fit p-2">
                   <a href={'https://www.linkedin.com/in/amruta-d-4366341b8/'} className="cursor-pointer">
-                    <img src={Linkedin} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
+                    <img src={Linkedin} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='LinkedIn'/>
                   </a>
                   <a href={'https://github.com/Amruta0103'} className="cursor-pointer">
-                    <img src={Github} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
+                    <img src={Github} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='GitHub'/>
                   </a>
                   <a href={'https://x.com/AmrutaDharap'} className="cursor-pointer">
-                    <img src={Twitter} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
+                    <img src={Twitter} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='X'/>
                   </a>
                   <a href={"https://drive.google.com/file/d/1UaTtg18td1BGG7S_YLgkW21OC16T2qYk/view?usp=drive_link"} className="cursor-pointer">
-                    <img src={File} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12 cursor-pointer" alt='img'/>
+                    <img src={File} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12 cursor-pointer" alt='Resume'/>
                   </a>
                 </div>
               </div>
@@ -113,10 +117,18 @@ function App() {
           }         
         </div>
         <ul className="flex flex-row sm:flex-col p-4 gap-2 sm:gap-4 justify-center items-center font-fontJetMono w-full sm:w-1/5 bg-white bottom-0">
-          <button onClick={()=> setTab('Home')} className={`${tab === 'Home' ? 'border-b-2 border-greyBlack': 'border-b border-transparent'} cursor-pointer w-fit list-none p-1 sm:p-2`}><h4>Home</h4></button>
-          <button onClick={()=> setTab('About')} className={`${tab === 'About' ? 'border-b-2 border-greyBlack': 'border-b border-transparent'} cursor-pointer w-fit list-none p-1 sm:p-2`}><h4>About Me</h4></button>
-          <button onClick={()=> setTab('Works')} className={`${tab === 'Works' ? 'border-b-2 border-greyBlack': 'border-b border-transparent'} cursor-pointer w-fit list-none p-1 sm:p-2`}><h4>Projects</h4></button>
-          <button onClick={()=> setTab('Connect')} className={`${tab === 'Connect' ? 'border-b-2 border-greyBlack': 'border-b border-transparent'} cursor-pointer w-fit list-none p-1 sm:p-2`}><h4>Let's Connect</h4></button>
+          <button onClick={()=> setTab('Home')} className={`cursor-pointer w-fit list-none p-1 sm:p-2`}>
+            <img src={idIcon} className="w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10" alt='idIcon'/>
+          </button>
+          <button onClick={()=> setTab('About')} className={`cursor-pointer w-fit list-none p-1 sm:p-2`}>
+          <img src={flagIcon} className="w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10" alt='flagIcon'/>
+          </button>
+          <button onClick={()=> setTab('Works')} className={`cursor-pointer w-fit list-none p-1 sm:p-2`}>
+          <img src={folderIcon} className="w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10" alt='folderIcon'/>
+          </button>
+          <button onClick={()=> setTab('Connect')} className={`cursor-pointer w-fit list-none p-1 sm:p-2`}>
+          <img src={linkIcon} className="w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10" alt='linkIcon'/>
+          </button>
         </ul>
       </div>
     </div>

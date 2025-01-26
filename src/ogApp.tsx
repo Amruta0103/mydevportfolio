@@ -42,7 +42,7 @@ function OgApp() {
         <source src={mountain} type="video/mp4"/>
       </video> */}
       <nav className={`sticky z-50 left-0 right-0 w-full flex justify-center ${visible ? 'top-0' : ''}`}>
-        <div className={`navBar absolute z-50 h-fit w-full xs:flex xs:justify-center py-0 xs:py-2 bg-transparent xs:bg-[#ffffff]`}>
+        <div className={`navBar absolute z-50 h-fit w-full xs:flex xs:justify-center py-0 xs:py-2 bg-transparent xs:bg-white`}>
           <div className="navBarDiv h-fit w-[80%] max-w-[1224px] flex justify-between items-center">
             <h3 className="font-fontJetMono text-black max-xs:hidden">AD</h3>
             <ul className="xs:flex flex-row justify-center gap-3 list-none text-black max-xs:hidden">
@@ -53,12 +53,12 @@ function OgApp() {
               <li className="text-base leading-[22px] font-normal"><a href='#wins'>Wins</a></li>
             </ul>
             <div className="flex flex-col justify-start items-start xs:hidden h-fit w-full">
-              <div onClick={() => setOpenNav(!openNav)} className={`navBar left-0 top-0 z-50 h-fit w-fit p-2 bg-[#ffffff] text-black rounded-br-2xl`}>
+              <div onClick={() => setOpenNav(!openNav)} className={`navBar left-0 top-0 z-50 h-fit w-fit p-2 bg-white text-black rounded-br-2xl`}>
                 <div className="navBarDiv h-fit w-full flex justify-evenly items-center">
                   <img src={arrowUp} height={24} width={24} alt='top' className={`${openNav? 'rotate-0': 'rotate-180'} transition-all duration-500 h-full`}/>
                 </div>
               </div>
-              <div className={`${openNav ? 'flex' : 'hidden'} bg-[#ffffff] left-0 right-0 w-1/2 h-full top-0 bottom-0 fixed justify-center items-center`}>
+              <div className={`${openNav ? 'flex' : 'hidden'} bg-white left-0 right-0 w-1/2 h-full top-0 bottom-0 fixed justify-center items-center`}>
                 <ul className="xs:flex flex-row gap-3 list-none text-black">
                   <li className="text-base leading-[22px] font-normal"><a href='#home'>Home</a></li>
                   <li className="text-base leading-[22px] font-normal"><a href='#about'>About</a></li>
