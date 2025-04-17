@@ -1,3 +1,37 @@
+/* .App{
+  animation: colors ease-in 5s infinite !important;
+}
+
+@keyframes colors{
+  0%{
+    background-color: #e6bcbc;
+  }
+  12.5%{
+    background-color: #e6dbbc;
+  }
+  25%{
+    background-color: #d1e6bc;
+  }
+  37.5%{
+    background-color: #bce6c7;
+  }
+  50%{
+    background-color: #bce6e6;
+  }
+  62.5%{
+    background-color: #bcc7e6;
+  }
+  75%{
+    background-color: #d1bce6;
+  }
+  87.5%{
+    background-color: #e6bcdb;
+  }
+  100%{
+    background-color: #e6bcbd;
+  }
+} */
+
 video, .bgImage {
   position: absolute;
   width: 100%;

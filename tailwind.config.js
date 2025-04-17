@@ -43,7 +43,7 @@ module.exports = {
       listStyleImage: {
         hyphen: "url('/src/assets/hyphenSmall.svg')",
       },
-    }
+    },
   },
   plugins: [],
 }
