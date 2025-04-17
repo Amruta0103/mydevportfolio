@@ -49,7 +49,7 @@ function App() {
   return (
     <div className="App z-0 relative flex flex-col justify-between items-center w-full h-full text-greyBlack scroll-smooth snap-start ">
       <div className="flex flex-col sm:flex-row gap-6 justify-evenly items-center h-full w-full">
-        <div className="contentContainer flex flex-col gap-6 w-4/5 sm:w-3/5 h-4/5 snap-mandatory">
+        <div className="contentContainer flex flex-col gap-20 w-4/5 sm:w-3/5 h-4/5 snap-mandatory">
             <div id="Home" className="HomeTab flex flex-col justify-start sm:justify-around items-center w-full h-screen mt-8">
               <div className="flex flex-col gap-5 items-center">
                 <img src={me} className="w-[300px] rounded-3xl" alt="img"/>
