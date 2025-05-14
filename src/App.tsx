@@ -10,12 +10,14 @@ import idIcon from "./assets/idIcon.svg";
 import flagIcon from "./assets/flagIcon.svg";
 import linkIcon from "./assets/linkIcon.svg";
 import folderIcon from "./assets/folderIcon.svg"
+import close from "./assets/X.svg";
 import courseCert from './assets/CourseraGoogleUXDesign.jpg';
 import WorkCards from "./components/workCards";
 // import Resume from "./assets/files/AmrutaDharap_2024.pdf";
 
 function App() {
   const [tab, setTab] = useState('/');
+  const [open, setOpen] = useState(false);
   // const downloadResume = () => {
   //   const pdfUrl = "./assets/files/AMRUTADHARAP_2024.pdf";
   //   const link = document.createElement("a");
@@ -48,8 +50,8 @@ function App() {
 
   return (
     <div className="App z-0 relative flex flex-col justify-between items-center w-full h-full text-greyBlack scroll-smooth snap-start ">
-      <div className="flex flex-col sm:flex-row gap-6 justify-evenly items-center h-full w-full">
-        <div className="contentContainer flex flex-col gap-20 w-4/5 sm:w-3/5 h-4/5 snap-mandatory">
+      <div className={`mainContainer flex flex-col sm:flex-row gap-6 justify-evenly items-center h-full w-full`}>
+        <div className={`contentContainer flex flex-col gap-20 w-4/5 sm:w-3/5 h-4/5 snap-mandatory ${open === true ? 'z-0 cursor-not-allowed opacity-30': ''}`}>
             <div id="Home" className="HomeTab flex flex-col justify-start sm:justify-around items-center w-full h-screen mt-8">
               <div className="flex flex-col gap-5 items-center">
                 <img src={me} className="w-[300px] rounded-3xl" alt="img"/>
@@ -59,7 +61,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div id="About" className="AboutTab flex flex-col gap-12 sm:gap-20 py-10 justify-around items-center w-full min-h-screen h-full">
+            <div id="About" className="AboutTab flex flex-col gap-12 sm:gap-20 py-10 justify-center items-center w-full min-h-screen h-full relative">
               <div id="Intro" className="flex flex-col gap-4 justify-center items-center w-full h-fit">
                 <h2 className="font-fontJose font-[550]">Hello 👋</h2>
                 <p className="font-fontJetMono text-center leading-6">I’m someone who loves solving problems through code and has a newfound passion for design. My focus is on building UIs that not only look good but also deliver smooth, intuitive user experiences.<br/><br/>
@@ -70,11 +72,11 @@ function App() {
               <div id="Wins" className="flex flex-col gap-4 justify-center items-start w-full h-fit">
                 <h3 className="font-fontJose font-[500]">Achievements</h3>
                 <div className="w-fit sm:w-full h-fit">
-                  <img src={courseCert} className="w-full max-w-fit xl:max-w-[900px]" alt="img"/>
+                  <img onClick={()=>setOpen(true)} src={courseCert} className="w-full object-contain max-w-[300px] cursor-pointer" alt="img"/>
                 </div>
               </div>
             </div>
-            <div id="Works" className="WorksTab flex flex-col gap-6 py-10 justify-evenly items-center w-full min-h-screen h-full">
+            <div id="Works" className="WorksTab flex flex-col gap-6 py-10 justify-center items-center w-full min-h-screen h-full">
               <h2 className="font-fontJose font-[550] py-2">Projects & Case Studies</h2>
                 {/* <p className="w-full h-fit text-center font-[550] font-fontRale">
                   Work is in Progress!! <br/>
@@ -82,8 +84,8 @@ function App() {
                 </p>
                 <p className="w-full h-fit text-center font-medium font-fontRale">Meanwhile you can checkout <a href={'https://github.com/Amruta0103'} className="cursor-pointer underline"> my Github here</a> : &#41;
                 </p> */}
-                <WorkCards/>
-                <p className="w-full h-fit text-center font-medium font-fontRale py-2 sm:py-4">My new projects with more <span className="font-semibold italic">design-focused</span> approach will be posted soon! Stay Tuned!!</p>
+              <WorkCards/>
+                {/* <p className="w-full h-fit text-center font-medium font-fontRale py-2 sm:py-4">My new projects with more <span className="font-semibold italic">design-focused</span> approach will be posted soon! Stay Tuned!!</p> */}
             </div>
             <div id='Connect' className="ConnectTab flex flex-col justify-around items-center w-full min-h-screen h-full">
               <div className="flex flex-col justify-center items-center gap-5 w-3/4">
@@ -108,7 +110,13 @@ function App() {
               </div>
             </div>   
         </div>
-        <ul className="tabsContainer h-creen flex flex-row sm:flex-col p-4 gap-2 sm:gap-4 justify-center items-center font-fontJetMono w-full sm:w-1/5 bg-transparent sm:fixed top-0 right-0 bottom-0">
+        <div className={`popupDiv ${open === true ? 'fixed left-0 top-0 right-0 bottom-0 z-20 opacity-100 ' : 'hidden'} flex self-center justify-self-center`}>
+          <button onClick={()=>setOpen(false)} className="absolute z-30 top-0 right-0 cursor-pointer shadow-md rounded-xl">
+            <img src={close} height={24} width={24} alt="close"/>
+          </button>
+          <img src={courseCert} className="w-full xs:max-w-[400px] sm:max-w-[550px] md:max-w-[730px] xl:max-w-[900px]" alt="img"/>
+        </div>
+        <ul className="tabsContainer sm:h-screen flex flex-row sm:flex-col p-2 sm:p-4 gap-2 sm:gap-4 justify-center items-center font-fontJetMono w-full sm:w-1/5 bg-black bg-opacity-15 sm:bg-transparent sticky sm:fixed top-0 right-0 bottom-0">
           <a href="/">
           <button onClick={()=>setTab("/")} className={`cursor-pointer w-fit list-none p-1 sm:p-2`}>
             <img src={idIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "/" ? 'animate-[pulse_2s]': ''}`} alt='idIcon'/>
