@@ -3,7 +3,7 @@ import "../App.css";
  
 export default function WorkCards(){
   return(
-    <div className='allCards flex flex-row gap-6 w-full h-full justify-start items-stretch overflow-auto p-1 sm:p-4'>
+    <div className='allCards flex flex-row gap-6 w-full h-full justify-start items-stretch overflow-auto !py-16 sm:p-4'>
       {projectsData.map((item:any)=>(
         <div className="cardMain flex flex-col xs:flex-row gap-4 justify-around items-center min-w-[200px] p-4 xs:min-w-[400px] lg:min-w-[500px] rounded-2xl shadow-xl">
         {/* <img src={item.image} className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-3xl object-fill" alt="img"/> */}

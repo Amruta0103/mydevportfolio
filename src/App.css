@@ -121,7 +121,3 @@ p{
   top: -80px;
   transition: 0.3s linear;
 }
-
-.allCards ::-webkit-scrollbar {
-  display: none;
-}

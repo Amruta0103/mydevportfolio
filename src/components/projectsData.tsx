@@ -4,6 +4,12 @@ import Lift from '../assets/Lift.svg';
 import Keyboard from '../assets/Keyboard.svg';
 const projectsData = [
   {
+    'title': 'Business Intelligence Filter Dashboard',
+    'description': 'A calculator App that does basic A performance-focused dummy BI dashboard that mimics Amazon-like filters',
+    'liveLink': 'https://bidashboard-three.vercel.app/',
+    'gitLink': 'https://github.com/Amruta0103/bidashboard',
+  },
+  {
     'title': 'Calculator',
     'description': 'A calculator App that does basic calculations',
     'image': Calculator,
