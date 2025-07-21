@@ -103,7 +103,7 @@ function App() {
                   <a href={'https://x.com/AmrutaDharap'} className="cursor-pointer">
                     <img src={Twitter} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='X'/>
                   </a>
-                  <a href={"https://drive.google.com/file/d/1UaTtg18td1BGG7S_YLgkW21OC16T2qYk/view?usp=drive_link"} className="cursor-pointer">
+                  <a href={"https://drive.google.com/file/d/1WdnG2_rZ8iRB-JKnYqrUVyMdpl2BKLEg/view?usp=drivesdk"} className="cursor-pointer">
                     <img src={File} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12 cursor-pointer" alt='Resume'/>
                   </a>
                 </div>
