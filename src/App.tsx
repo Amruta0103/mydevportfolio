@@ -11,7 +11,7 @@ import flagIcon from "./assets/flagIcon.svg";
 import linkIcon from "./assets/linkIcon.svg";
 import folderIcon from "./assets/folderIcon.svg"
 import close from "./assets/X.svg";
-import courseCert from './assets/CourseraGoogleUXDesign.jpg';
+import courseCert from './assets/CourseraGoogleUXDesign.webp';
 import WorkCards from "./components/workCards";
 // import Resume from "./assets/files/AmrutaDharap_2024.pdf";
 
@@ -54,7 +54,7 @@ function App() {
         <div className={`contentContainer flex flex-col gap-20 w-4/5 sm:w-3/5 h-4/5 snap-mandatory ${open === true ? 'z-0 cursor-not-allowed opacity-30': ''}`}>
             <div id="Home" className="HomeTab flex flex-col justify-start sm:justify-around items-center w-full h-screen mt-8">
               <div className="flex flex-col gap-5 items-center">
-                <img src={me} className="w-[300px] rounded-3xl" alt="img"/>
+                <img src={me} className="w-[300px] rounded-3xl" width={'100%'} height={'100%'} loading="lazy" alt="img"/>
                 <div className="flex flex-col gap-3 justify-center items-center text-center max-h-[300px] py-3 sm:py-6">
                   <p className="font-fontJetMono text-[40px] sm:text-[52px] leading-[44px] sm:leading-[54px] text-[#000000b2]">Amruta Dharap</p>
                   <p className="font-fontRale text-xl leading-5 font-semibold text-[#0000009c]">UI / UX / FRONTEND</p>
@@ -72,7 +72,7 @@ function App() {
               <div id="Wins" className="flex flex-col gap-4 justify-center items-start w-full h-fit">
                 <h3 className="font-fontJose font-[500]">Achievements</h3>
                 <div className="w-fit sm:w-full h-fit">
-                  <img onClick={()=>setOpen(true)} src={courseCert} className="w-full object-contain max-w-[300px] cursor-pointer" alt="img"/>
+                  <img onClick={()=>setOpen(true)} src={courseCert} className="w-full object-contain max-w-[300px] cursor-pointer" width={'100%'} height={'100%'} loading="lazy" alt="img"/>
                 </div>
               </div>
             </div>
@@ -95,16 +95,16 @@ function App() {
                 </div>
                 <div className="flex gap-4 justify-center items-center w-fit p-2">
                   <a href={'https://www.linkedin.com/in/amruta-d-4366341b8/'} className="cursor-pointer">
-                    <img src={Linkedin} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='LinkedIn'/>
+                    <img src={Linkedin} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" width={'100%'} height={'100%'} loading="lazy" alt='LinkedIn'/>
                   </a>
                   <a href={'https://github.com/Amruta0103'} className="cursor-pointer">
-                    <img src={Github} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='GitHub'/>
+                    <img src={Github} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" width={'100%'} height={'100%'} loading="lazy" alt='GitHub'/>
                   </a>
                   <a href={'https://x.com/AmrutaDharap'} className="cursor-pointer">
-                    <img src={Twitter} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='X'/>
+                    <img src={Twitter} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" width={'100%'} height={'100%'} loading="lazy" alt='X'/>
                   </a>
                   <a href={"https://drive.google.com/file/d/1WdnG2_rZ8iRB-JKnYqrUVyMdpl2BKLEg/view?usp=drivesdk"} className="cursor-pointer">
-                    <img src={File} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12 cursor-pointer" alt='Resume'/>
+                    <img src={File} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12 cursor-pointer" width={'100%'} height={'100%'} loading="lazy" alt='Resume'/>
                   </a>
                 </div>
               </div>
@@ -112,29 +112,29 @@ function App() {
         </div>
         <div className={`popupDiv ${open === true ? 'fixed left-0 top-0 right-0 bottom-0 z-20 opacity-100 ' : 'hidden'} flex self-center justify-self-center`}>
           <button onClick={()=>setOpen(false)} className="absolute z-30 top-0 right-0 cursor-pointer shadow-md rounded-xl">
-            <img src={close} height={24} width={24} alt="close"/>
+            <img src={close} height={24} width={24} loading="lazy" alt="close"/>
           </button>
-          <img src={courseCert} className="w-full xs:max-w-[400px] sm:max-w-[550px] md:max-w-[730px] xl:max-w-[900px]" alt="img"/>
+          <img src={courseCert} className="w-full xs:max-w-[400px] sm:max-w-[550px] md:max-w-[730px] xl:max-w-[900px]" width={'100%'} height={'100%'} loading="lazy" alt="img"/>
         </div>
         <ul className="tabsContainer sm:h-screen flex flex-row sm:flex-col p-2 sm:p-4 gap-2 sm:gap-4 justify-center items-center font-fontJetMono w-full sm:w-1/5 bg-black bg-opacity-15 sm:bg-transparent sticky sm:fixed top-0 right-0 bottom-0">
           <a href="/">
           <button onClick={()=>setTab("/")} className={`cursor-pointer w-fit list-none p-1 sm:p-2`}>
-            <img src={idIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "/" ? 'animate-[pulse_2s]': ''}`} alt='idIcon'/>
+            <img src={idIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "/" ? 'animate-[pulse_2s]': ''}`} width={'100%'} height={'100%'} loading="lazy" alt='idIcon'/>
           </button>
           </a>
           <a href="#About">
           <button onClick={()=>setTab("AboutTab")} className={`cursor-pointer w-fit list-none p-1 sm:p-2`}>
-          <img src={flagIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "AboutTab" ? 'animate-[pulse_2s]': ''}`} alt='flagIcon'/>
+          <img src={flagIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "AboutTab" ? 'animate-[pulse_2s]': ''}`} width={'100%'} height={'100%'} loading="lazy" alt='flagIcon'/>
           </button>
           </a>
           <a href="#Works">
           <button onClick={()=>setTab("WorksTab")} className={`cursor-pointer w-fit list-none p-1 sm:p-2`}>
-          <img src={folderIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "WorksTab" ? 'animate-[pulse_2s]': ''}`} alt='folderIcon'/>
+          <img src={folderIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "WorksTab" ? 'animate-[pulse_2s]': ''}`} width={'100%'} height={'100%'} loading="lazy" alt='folderIcon'/>
           </button>
           </a>
           <a href="#Connect">
           <button onClick={()=>setTab("ConnectTab")} className={`cursor-pointer w-fit list-none p-1 sm:p-2`}>
-          <img src={linkIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "ConnectTab" ? 'animate-[pulse_2s]': ''}`} alt='linkIcon'/>
+          <img src={linkIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "ConnectTab" ? 'animate-[pulse_2s]': ''}`} width={'100%'} height={'100%'} loading="lazy" alt='linkIcon'/>
           </button>
           </a>
         </ul>

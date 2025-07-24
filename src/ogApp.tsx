@@ -22,7 +22,6 @@ function OgApp() {
     const currentScrollPos = window.scrollY
       if(currentScrollPos > prevScrollPos){
         setVisible(false)
-        // console.log('what scroll is this')
         setOpenNav(false);
       }else{
         setVisible(true)
@@ -55,7 +54,7 @@ function OgApp() {
             <div className="flex flex-col justify-start items-start xs:hidden h-fit w-full">
               <div onClick={() => setOpenNav(!openNav)} className={`navBar left-0 top-0 z-50 h-fit w-fit p-2 bg-white text-black rounded-br-2xl`}>
                 <div className="navBarDiv h-fit w-full flex justify-evenly items-center">
-                  <img src={arrowUp} height={24} width={24} alt='top' className={`${openNav? 'rotate-0': 'rotate-180'} transition-all duration-500 h-full`}/>
+                  <img src={arrowUp} height={24} width={24} loading="lazy" alt='top' className={`${openNav? 'rotate-0': 'rotate-180'} transition-all duration-500 h-full`}/>
                 </div>
               </div>
               <div className={`${openNav ? 'flex' : 'hidden'} bg-white left-0 right-0 w-1/2 h-full top-0 bottom-0 fixed justify-center items-center`}>
@@ -72,13 +71,13 @@ function OgApp() {
         </div>
       </nav>
       <div id='home' className="introBlock h-full min-h-max w-full py-8 md:py-[60px] px-4 md:px-0 relative flex flex-col gap-6 justify-center items-center bg-white">
-        {/* <img src={grainscreen} className="bgImage h-screen" alt="img"/> */}
+        {/* <img src={grainscreen} className="bgImage h-screen" width={'100%'} height={'100%'} loading="lazy" alt="img"/> */}
         <div className="w-full h-full text-center flex flex-col gap-3 justify-center items-center max-h-[300px] py-6">
           <p className="font-fontJetMono text-[52px] leading-[54px] text-[#000000b2]">Amruta Dharap</p>
           <p className="font-fontRale text-xl leading-5 font-semibold text-[#0000009c]">UI / UX / FRONTEND</p>
         </div>
         <div className="flex justify-around items-center gap-0 sm:gap-3 px-4 xl:px-0 py-4 w-full max-w-[1224px] h-full bg-black text-white rounded-3xl">
-          <img src={grainscreen} className="h-4/5 w-[300px] rounded-3xl" alt="img"/>
+          <img src={grainscreen} className="h-4/5 w-[300px] rounded-3xl" width={'100%'} height={'100%'} loading="lazy" alt="img"/>
           <div className="flex flex-col gap-4 justify-center items-center w-full h-full max-w-[600px]">
             <h1 className="font-fontlaila">Hello 👋</h1>
             <p className="font-fontJetMono text-center w-[70%] leading-6">I’m someone who loves problem-solving through code and has a newfound passion for design. My focus is on building UIs that not only look good but also deliver smooth, intuitive user experiences.<br/>
@@ -99,7 +98,7 @@ function OgApp() {
       </div>
       <div id='connect' className="connectBlock h-1/2 w-full py-8 md:py-[60px] px-4 md:px-0 relative flex justify-center">
         <div className="flex flex-col justify-center items-center gap-5 sm:gap-6 p-6 w-full max-w-[80%] h-[600px] rounded-3xl text-white relative">
-        {/* <img src={oldType} className="absolute -z-10 object-fit w-full h-full rounded-3xl" alt="img"/> */}
+        {/* <img src={oldType} className="absolute -z-10 object-fit w-full h-full rounded-3xl" width={'100%'} height={'100%'} loading="lazy" alt="img"/> */}
           {/* <video autoPlay muted loop className="opacity-85 bg-repeat-round">
             <source src={typewriter} type="video/mp4"/>
           </video> */}
@@ -108,9 +107,9 @@ function OgApp() {
             <p className="font-fontJose text-xl leading-[22px] text-center">Let’s connect, share ideas, and build something incredible together! 🌟</p>
           </div>
           <div className="flex gap-4 justify-center items-center w-fit p-2">
-            <img src={Linkedin} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
-            <img src={Github} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
-            <img src={Twitter} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" alt='img'/>
+            <img src={Linkedin} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" width={'100%'} height={'100%'} loading="lazy" alt='img'/>
+            <img src={Github} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" width={'100%'} height={'100%'} loading="lazy" alt='img'/>
+            <img src={Twitter} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" width={'100%'} height={'100%'} loading="lazy" alt='img'/>
           </div>
         </div>
       </div>
@@ -121,7 +120,7 @@ function OgApp() {
           </div> */}
           <div className="h-auto flex flex-col gap-10 justify-center items-center py-8 px-4">
             <p className="font-fontLaila text-[40px]">Achievements 🎉</p>
-             <img src={courseCert} className="w-[800px]" alt="img"/>
+             <img src={courseCert} className="w-[800px]" width={'100%'} height={'100%'} loading="lazy" alt="img"/>
           </div>
         </div>
       </div>      
@@ -129,7 +128,7 @@ function OgApp() {
         <a href='#home'>
           <div className={`topBtnBox absolute right-4 z-50 h-fit w-fit py-2 bg-[#fffff9cc] text-black rounded-2xl p-2`}>
             <div className="topBtnDiv h-fit w-full flex justify-evenly items-center">
-              <img src={arrowUp} height={24} width={24} alt='top' />
+              <img src={arrowUp} height={24} width={24} loading="lazy" alt='top' />
             </div>
           </div>
         </a>
