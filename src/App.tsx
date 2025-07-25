@@ -116,27 +116,27 @@ function App() {
           </button>
           <img src={courseCert} className="w-full xs:max-w-[400px] sm:max-w-[550px] md:max-w-[730px] xl:max-w-[900px]" width={'100%'} height={'100%'} loading="lazy" alt="img"/>
         </div>
-        <ul className="tabsContainer sm:h-screen flex flex-row sm:flex-col p-2 sm:p-4 gap-2 sm:gap-4 justify-center items-center font-fontJetMono w-full sm:w-1/5 bg-black bg-opacity-15 sm:bg-transparent sticky sm:fixed top-0 right-0 bottom-0">
-          <a href="/">
-          <button onClick={()=>setTab("/")} className={`cursor-pointer w-fit list-none p-1 sm:p-2`}>
+        <ul className="tabsContainer sm:h-screen flex flex-row sm:flex-col p-2 sm:p-4 gap-1 sm:gap-2 justify-center items-center font-fontJetMono w-full sm:w-1/5 bg-black bg-opacity-15 sm:bg-transparent sticky sm:fixed top-0 right-0 bottom-0">
+          <li className='list-none'><a href="/">
+          <button onClick={()=>setTab("/")} className={`cursor-pointer w-fit list-none p-1 sm:p-2 m-4`}>
             <img src={idIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "/" ? 'animate-[pulse_2s]': ''}`} width={'100%'} height={'100%'} loading="lazy" alt='idIcon'/>
           </button>
-          </a>
-          <a href="#About">
-          <button onClick={()=>setTab("AboutTab")} className={`cursor-pointer w-fit list-none p-1 sm:p-2`}>
+          </a></li>
+          <li className='list-none'><a href="#About">
+          <button onClick={()=>setTab("AboutTab")} className={`cursor-pointer w-fit list-none p-1 sm:p-2 m-4`}>
           <img src={flagIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "AboutTab" ? 'animate-[pulse_2s]': ''}`} width={'100%'} height={'100%'} loading="lazy" alt='flagIcon'/>
           </button>
-          </a>
-          <a href="#Works">
-          <button onClick={()=>setTab("WorksTab")} className={`cursor-pointer w-fit list-none p-1 sm:p-2`}>
+          </a></li>
+          <li className='list-none'><a href="#Works">
+          <button onClick={()=>setTab("WorksTab")} className={`cursor-pointer w-fit list-none p-1 sm:p-2 m-4`}>
           <img src={folderIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "WorksTab" ? 'animate-[pulse_2s]': ''}`} width={'100%'} height={'100%'} loading="lazy" alt='folderIcon'/>
           </button>
-          </a>
-          <a href="#Connect">
-          <button onClick={()=>setTab("ConnectTab")} className={`cursor-pointer w-fit list-none p-1 sm:p-2`}>
+          </a></li>
+          <li className='list-none'><a href="#Connect">
+          <button onClick={()=>setTab("ConnectTab")} className={`cursor-pointer w-fit list-none p-1 sm:p-2 m-4`}>
           <img src={linkIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "ConnectTab" ? 'animate-[pulse_2s]': ''}`} width={'100%'} height={'100%'} loading="lazy" alt='linkIcon'/>
           </button>
-          </a>
+          </a></li>
         </ul>
       </div>
     </div>
