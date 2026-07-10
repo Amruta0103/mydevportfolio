@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 // @ts-ignore: allow importing CSS side-effect in TSX without type declarations
 import './App.css';
 import me from './assets/me.webp'
@@ -7,20 +7,20 @@ import Linkedin from "./assets/Linkedin.svg";
 import Github from "./assets/Github.svg";
 import Twitter from "./assets/Twitter.svg";
 import File from "./assets/File.svg";
-import idIcon from "./assets/idIcon.svg";
-import flagIcon from "./assets/flagIcon.svg";
-import linkIcon from "./assets/linkIcon.svg";
-import folderIcon from "./assets/folderIcon.svg"
-import close from "./assets/X.svg";
-import courseCert from './assets/CourseraGoogleUXDesign.webp';
-import React from "react";
+// import idIcon from "./assets/idIcon.svg";
+// import flagIcon from "./assets/flagIcon.svg";
+// import linkIcon from "./assets/linkIcon.svg";
+// import folderIcon from "./assets/folderIcon.svg"
+// import close from "./assets/X.svg";
+// import courseCert from './assets/CourseraGoogleUXDesign.webp';
+// import React from "react";
 import WorkCards from "./components/workCards";
 // const WorkCards = React.lazy(() => import("./components/workCards.js"));
 // import Resume from "./assets/files/AmrutaDharap_2024.pdf";
 
 function App() {
-  const [tab, setTab] = useState('/');
-  const [open, setOpen] = useState(false);
+  // const [tab, setTab] = useState('/');
+  // const [open, setOpen] = useState(false);
   // const downloadResume = () => {
   //   const pdfUrl = "./assets/files/AMRUTADHARAP_2024.pdf";
   //   const link = document.createElement("a");
