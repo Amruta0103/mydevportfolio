@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./App.css";
+// @ts-ignore: allow importing CSS side-effect in TSX without type declarations
+import './App.css';
 import me from './assets/me.webp'
 // import flyingComp from "./assets/galaxy.webp";
 import Linkedin from "./assets/Linkedin.svg";
@@ -12,7 +13,9 @@ import linkIcon from "./assets/linkIcon.svg";
 import folderIcon from "./assets/folderIcon.svg"
 import close from "./assets/X.svg";
 import courseCert from './assets/CourseraGoogleUXDesign.webp';
+import React from "react";
 import WorkCards from "./components/workCards";
+// const WorkCards = React.lazy(() => import("./components/workCards.js"));
 // import Resume from "./assets/files/AmrutaDharap_2024.pdf";
 
 function App() {
@@ -49,95 +52,58 @@ function App() {
 
 
   return (
-    <div className="App z-0 relative flex flex-col justify-between items-center w-full h-full text-greyBlack scroll-smooth snap-start ">
-      <div className={`mainContainer flex flex-col sm:flex-row gap-6 justify-evenly items-center h-full w-full`}>
-        <div className={`contentContainer flex flex-col gap-20 w-4/5 sm:w-3/5 h-4/5 snap-mandatory ${open === true ? 'z-0 cursor-not-allowed opacity-30': ''}`}>
-            <div id="Home" className="HomeTab flex flex-col justify-start sm:justify-around items-center w-full h-screen mt-8">
-              <div className="flex flex-col gap-5 items-center">
-                <img src={me} className="w-[300px] rounded-3xl" width={'100%'} height={'100%'} loading="lazy" alt="img"/>
+    <div className="App z-0 relative flex flex-col justify-between items-center w-full h-full text-greyBlack scroll-smooth snap-start cursor">
+      <div className={`mainContainer h-full w-4/5`}>
+        {/* <div className={`contentContainer flex flex-col gap-20 w-4/5 sm:w-3.5/5 h-4/5 snap-mandatory ${open === true ? 'z-0 cursor-not-allowed opacity-30': ''}`}> */}
+          <div id="Home" className="HomeTab flex flex-col justify-start sm:justify-evenly items-center w-full h-screen">
+            <div className="flex flex-col min-[950px]:flex-row gap-6 w-full justify-center items-center">
+              <div className="flex flex-col gap-4 justify-center items-center w-full h-full basis-1/3">
+                <img src={me} className="w-[300px] max-w-[300px] rounded-full py-2" width={300} height={350} loading="lazy" alt="img" fetchPriority="high"/>
                 <div className="flex flex-col gap-3 justify-center items-center text-center max-h-[300px] py-3 sm:py-6">
-                  <p className="font-fontJetMono text-[40px] sm:text-[52px] leading-[44px] sm:leading-[54px] text-[#000000b2]">Amruta Dharap</p>
-                  <p className="font-fontRale text-xl leading-5 font-semibold text-[#0000009c]">UI / UX / FRONTEND</p>
+                  <h2 className="font-fontJetMono text-[30px] leading-[32px] font-[500]">Amruta Dharap</h2>
+                  <p className="font-fontRale text-xl leading-5 font-semibold text-[#0000009c]">Game Programmer</p>
+                  <p className="font-fontRale text-xl leading-5 font-semibold text-[#0000009c]">Unity • C#</p>
+                  <div className="flex gap-4 justify-center items-center w-fit p-2">
+                    <a href={'https://www.linkedin.com/in/amruta-d-4366341b8/'} className="cursor-pointer">
+                    <img src={Linkedin} className="w-4 h-4 xl:w-7 xl:h-7" width={'100%'} height={'100%'} loading="lazy" alt='LinkedIn'/>
+                    </a>
+                    <a href={'https://github.com/Amruta0103'} className="cursor-pointer">
+                      <img src={Github} className="w-4 h-4 xl:w-7 xl:h-7" width={'100%'} height={'100%'} loading="lazy" alt='GitHub'/>
+                    </a>
+                    <a href={'https://x.com/AmrutaDharap'} className="cursor-pointer">
+                      <img src={Twitter} className="w-4 h-4 xl:w-7 xl:h-7" width={'100%'} height={'100%'} loading="lazy" alt='X'/>
+                    </a>
+                    <a href={"https://drive.google.com/file/d/1WdnG2_rZ8iRB-JKnYqrUVyMdpl2BKLEg/view?usp=drivesdk"} className="cursor-pointer">
+                      <img src={File} className="w-4 h-4 xl:w-7 xl:h-7 cursor-pointer" width={'100%'} height={'100%'} loading="lazy" alt='Resume'/>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div id="About" className="AboutTab flex flex-col gap-12 sm:gap-20 py-10 justify-center items-center w-full min-h-screen h-full relative">
-              <div id="Intro" className="flex flex-col gap-4 justify-center items-center w-full h-fit">
-                <h2 className="font-fontJose font-[550]">Hello 👋</h2>
-                <p className="font-fontJetMono text-center leading-6">I’m someone who loves solving problems through code and has a newfound passion for design. My focus is on building UIs that not only look good but also deliver smooth, intuitive user experiences.<br/><br/>
-                Currently, I’m diving deeper into UX design, while sharpening my skills in coding, Hindustani Classical Violin playing, and Japanese language studies (because why not add some culture to creativity?). <br/><br/>
-                This space is my journey, where I’ll document my growth and share my projects. 
-                Whether it’s code, design, or a mix of both, I’m excited to learn and create cool stuff.</p>
-              </div>
-              <div id="Wins" className="flex flex-col gap-4 justify-center items-start w-full h-fit">
-                <h3 className="font-fontJose font-[500]">Achievements</h3>
-                <div className="w-fit sm:w-full h-fit">
-                  <img onClick={()=>setOpen(true)} src={courseCert} className="w-full object-contain max-w-[300px] cursor-pointer" width={'100%'} height={'100%'} loading="lazy" alt="img"/>
-                </div>
-              </div>
-            </div>
-            <div id="Works" className="WorksTab flex flex-col gap-6 py-10 justify-center items-center w-full min-h-screen h-full">
-              <h2 className="font-fontJose font-[550] py-2">Projects & Case Studies</h2>
-                {/* <p className="w-full h-fit text-center font-[550] font-fontRale">
-                  Work is in Progress!! <br/>
-                  Updates will be posted soon! <br/>
+              <div className="flex flex-col gap-5 justify-center items-start w-full min-[950px]:w-fit h-full basis-2/3 overflow-x-hidden">
+                <p className="font-fontRale font-[500] text-lg text-left leading-6 px-4 italic">
+                  <span className="font-semibold text-lg leading-[22px]">Building games through code.</span><br/><br/>
+                  I've always been fascinated by how games are built, just as much as how they're played.<br/>
+                  Now I'm turning that curiosity into playable experiences with Unity & C#.<br/>
+                  My background in frontend development gave me a strong foundation in building user-centered software and writing clean, maintainable code.
+                  <br/>
+                  Today, I'm exploring gameplay mechanics, solving interesting programming challenges, and learning by building one project at a time.
+                  <br/>
+                  Beyond programming, I enjoy Hindustani Classical Violin, studying Japanese, and exploring new ideas simply because I love understanding how things work.
                 </p>
-                <p className="w-full h-fit text-center font-medium font-fontRale">Meanwhile you can checkout <a href={'https://github.com/Amruta0103'} className="cursor-pointer underline"> my Github here</a> : &#41;
-                </p> */}
-              <WorkCards/>
-                {/* <p className="w-full h-fit text-center font-medium font-fontRale py-2 sm:py-4">My new projects with more <span className="font-semibold italic">design-focused</span> approach will be posted soon! Stay Tuned!!</p> */}
-            </div>
-            <div id='Connect' className="ConnectTab flex flex-col justify-around items-center w-full min-h-screen h-full">
-              <div className="flex flex-col justify-center items-center gap-5 w-3/4">
-                <div className="flex flex-col gap-5 justify-center items-center">
-                  <h2 className="font-fontJose font-[550]">Let's Connect</h2>
-                  <p className="font-fontJetMono text-lg leading-[22px] text-center">Let’s connect, share ideas, and build something incredible together! 🌟</p>
-                </div>
-                <div className="flex gap-4 justify-center items-center w-fit p-2">
-                  <a href={'https://www.linkedin.com/in/amruta-d-4366341b8/'} className="cursor-pointer">
-                    <img src={Linkedin} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" width={'100%'} height={'100%'} loading="lazy" alt='LinkedIn'/>
-                  </a>
-                  <a href={'https://github.com/Amruta0103'} className="cursor-pointer">
-                    <img src={Github} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" width={'100%'} height={'100%'} loading="lazy" alt='GitHub'/>
-                  </a>
-                  <a href={'https://x.com/AmrutaDharap'} className="cursor-pointer">
-                    <img src={Twitter} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12" width={'100%'} height={'100%'} loading="lazy" alt='X'/>
-                  </a>
-                  <a href={"https://drive.google.com/file/d/1WdnG2_rZ8iRB-JKnYqrUVyMdpl2BKLEg/view?usp=drivesdk"} className="cursor-pointer">
-                    <img src={File} className="w-6 h-6 md:w-9 md:h-9 xl:w-12 xl:h-12 cursor-pointer" width={'100%'} height={'100%'} loading="lazy" alt='Resume'/>
-                  </a>
+                <div className="flex flex-col gap-3 h-fit w-full">
+                  <p className="font-fontRale font-semibold text-xl text-left leading-[22px] px-4 italic">Games & Projects</p>
+                  <WorkCards/>
                 </div>
               </div>
-            </div>   
-        </div>
-        <div className={`popupDiv ${open === true ? 'fixed left-0 top-0 right-0 bottom-0 z-20 opacity-100 ' : 'hidden'} flex self-center justify-self-center`}>
+            </div>
+          </div>
+        {/* </div> */}
+        {/* <div className={`popupDiv ${open === true ? 'fixed left-0 top-0 right-0 bottom-0 z-20 opacity-100 ' : 'hidden'} flex self-center justify-self-center`}>
           <button onClick={()=>setOpen(false)} className="absolute z-30 top-0 right-0 cursor-pointer shadow-md rounded-xl">
             <img src={close} height={24} width={24} loading="lazy" alt="close"/>
           </button>
           <img src={courseCert} className="w-full xs:max-w-[400px] sm:max-w-[550px] md:max-w-[730px] xl:max-w-[900px]" width={'100%'} height={'100%'} loading="lazy" alt="img"/>
-        </div>
-        <ul className="tabsContainer sm:h-screen flex flex-row sm:flex-col p-2 sm:p-4 gap-1 sm:gap-2 justify-center items-center font-fontJetMono w-full sm:w-1/5 bg-black bg-opacity-15 sm:bg-transparent sticky sm:fixed top-0 right-0 bottom-0">
-          <li className='list-none'><a href="/">
-          <button onClick={()=>setTab("/")} className={`cursor-pointer w-fit list-none p-1 sm:p-2 m-4`}>
-            <img src={idIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "/" ? 'animate-[pulse_2s]': ''}`} width={'100%'} height={'100%'} loading="lazy" alt='idIcon'/>
-          </button>
-          </a></li>
-          <li className='list-none'><a href="#About">
-          <button onClick={()=>setTab("AboutTab")} className={`cursor-pointer w-fit list-none p-1 sm:p-2 m-4`}>
-          <img src={flagIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "AboutTab" ? 'animate-[pulse_2s]': ''}`} width={'100%'} height={'100%'} loading="lazy" alt='flagIcon'/>
-          </button>
-          </a></li>
-          <li className='list-none'><a href="#Works">
-          <button onClick={()=>setTab("WorksTab")} className={`cursor-pointer w-fit list-none p-1 sm:p-2 m-4`}>
-          <img src={folderIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "WorksTab" ? 'animate-[pulse_2s]': ''}`} width={'100%'} height={'100%'} loading="lazy" alt='folderIcon'/>
-          </button>
-          </a></li>
-          <li className='list-none'><a href="#Connect">
-          <button onClick={()=>setTab("ConnectTab")} className={`cursor-pointer w-fit list-none p-1 sm:p-2 m-4`}>
-          <img src={linkIcon} className={`w-4 h-4 md:w-8 md:h-8 xl:w-10 xl:h-10 ${tab === "ConnectTab" ? 'animate-[pulse_2s]': ''}`} width={'100%'} height={'100%'} loading="lazy" alt='linkIcon'/>
-          </button>
-          </a></li>
-        </ul>
+        </div> */} 
       </div>
     </div>
   )
